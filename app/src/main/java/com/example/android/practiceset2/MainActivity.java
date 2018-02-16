@@ -10,19 +10,21 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     // PASTE CODE YOU WANT TO TEST HERExf
-    display1("Help!");
-    display2("Me!");
-    display3("Please!");
+    int weekday = 5;
+    int weekend = 9;
+    int optimalHours = 7 * 8;
+    int actualHours = weekday;
+    actualHours = actualHours + weekend * 2;
+    int solution = optimalHours - actualHours;
+    display1(solution);
   }
-
   /**
    * Display methods that allow the text to appear on the screen. Don't worry if you don't know
    * how these work yet. We'll be covering them in lesson 3.
    */
-
-  public void display1(String text) {
+  public void display1(int i) {
     TextView t = findViewById(R.id.display_text_view);
-    t.setText(text);
+    t.setText("" + i);
   }
 
   public void display2(String text) {
